@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>실시간 객체 및 거리 인식</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="container">
+    <video id="webcam" autoplay muted playsinline></video>
+    <canvas id="overlay"></canvas>
+    <div id="info-panel">
+      <h1>⚠️ 주의 시스템</h1>
+      <p id="detected-object">인식된 객체: 없음</p>
+      <p id="distance">예상 거리: -</p>
+      <p id="action">상태: 대기 중</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+  <script src="script.js"></script>
+</body>
+</html>
